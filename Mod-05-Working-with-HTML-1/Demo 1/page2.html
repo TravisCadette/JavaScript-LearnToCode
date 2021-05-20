@@ -1,0 +1,87 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Demo</title>
+</head>
+
+<body>
+    <div id="messageDiv"></div>
+    <script>
+        // .get ElementById helps target a tag
+        // .innerHTML inserts code
+        const div = document.getElementById("messageDiv");
+        
+        let today = new Date();
+        let month = today.getMonth() +1;
+        let dayOfMonth = today.getDate();
+        let year = today.getFullYear();
+        let welcomeMessage = "Welcome, today is " + month + "/" + dayOfMonth + "/" + year;
+
+        div.innerHTML = welcomeMessage;
+    </script>
+</body>
+
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Demo</title>
+</head>
+
+<body>
+    <div id="messageDiv"></div>
+
+    <script>
+        // THis script creates a welcome message that displays the current date to the user n a DIV
+        // Get today's date
+        let today = new Date();
+        // Get the day number and convert it into the day name
+        let dayOfWeekNum = today.getDay(); // values 0-6
+        let dayNames = [
+            "Sunday",
+            "Monday",
+            "Tuesday",
+            "Wexdnesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+        ];
+        let dayName = dayNames[dayOfWeekNum];
+        // Get the JS month number (0-11) and convert it into the month name 
+        // and the human (1-12) month number
+        let jsMonth = today.getMonth(); // values 0-11
+        let humanMonth = today.getMonth() + 1; // values 1-12
+        let monthNames = [
+            "January",
+            "February",
+            "March",
+            "April",
+            "May",
+            "June",
+            "July",
+            "August",
+            "September",
+            "October",
+            "November",
+            "December"
+        ];
+        let monthName = monthNames[jsMonth];
+        // Get the day of the month (1-31)
+        let dayOfMonth = today.getDate();
+        // Get the full year (ex: 2021)
+        let year = today.getFullYear();
+        // create a welcome message
+        // Welcome, today is Thursday, May 20, 2021
+        let welcomeMessage = "Welcome, today is " + dayName + ", " + monthName + " " + dayOfMonth + ", " + year;
+        // Find the div whose id is "messageDiv" and put the message there
+        const div = document.getElementById("messageDiv");
+        div.innerHTML = welcomeMessage;
+    </script>
+</body>
+
+</html>
