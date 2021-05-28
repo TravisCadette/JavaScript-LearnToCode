@@ -38,10 +38,17 @@ let data = [{
     Fee: 50.00,
 }];
 
-let itemToSearchFor = "07/22/19";
-let course = data.find(c => c.StartDate == itemToSearchFor);
+let itemToSearchFor = "19SUM300";
+let course = data.find(c => c.CourseId == itemToSearchFor);
 if (course != null) {
     console.log(course);
 } else {
     console.log(itemToSearchFor + " was not found");
 }
+
+// look for 19SUM300
+
+let courseIdToSearchFor = "19SUM300"
+
+// On way to find this to write your own loop and do all the comparisons
+
